@@ -1,5 +1,5 @@
 package com.examly.springapp.model;
-public class laptop{
+public class Laptop{
     private int laptopId;
     private string laptopBrand;
     private int laptopPrice;
