@@ -7,5 +7,12 @@ public class LaptopController{
         return;
 
     }
-    @
+    @GetMapping("/{laptopId}")
+    public Laptop getLaptop(@PathVariable int laptopId){
+        return;
+    }
+    @GetMapping("/")
+    public List<Laptop> getAllLaptops(){
+        return;
+    }
 }
