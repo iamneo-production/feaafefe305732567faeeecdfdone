@@ -4,8 +4,9 @@ import org.springframework.web.bind.annotation.*;
 public class LaptopController{
     @PostMapping("/")
     public boolean createLaptop(@RequestBody Laptop laptop){
-        
-        return;
+        boolean success = addLaptopToDatabase(laptop);
+
+        return success;
 
     }
     @GetMapping("/{laptopId}")
