@@ -3,7 +3,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class LaptopController{
     @PostMapping("/")
-    public boolean createLaptop(){
+    public boolean createLaptop(@RequestBody Laptop laptop){
+        
         return;
 
     }
