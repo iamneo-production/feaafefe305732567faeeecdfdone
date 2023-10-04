@@ -12,17 +12,22 @@ public class LaptopController{
     public boolean createLaptop(@RequestBody Laptop laptop){
         laptop.setLaptopId(nextLaptopId++);
 
-        boolean success = addLaptopDatabase(laptop);
+        boolean success = laptopDatabase.add(laptop);
 
         return success;
 
     }
     @GetMapping("/{laptopId}")
     public Laptop getLaptop(@PathVariable int laptopId){
-        return;
+        for (Laptop laptop : laptopDatabase){
+            if (laptop.getLaptopId() == laptopId){
+                return laptop;
+            }
+        }
+        return null;
     }
     @GetMapping("/")
     public List<Laptop> getAllLaptops(){
-        return;
+        return laptopDatabase;
     }
 }
