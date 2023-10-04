@@ -11,8 +11,8 @@ public class LaptopController{
     @PostMapping("/")
     public boolean createLaptop(@RequestBody Laptop laptop){
         laptop.setLaptopId(nextLaptopId++);
-        
-        boolean success = addLaptopToDatabase(laptop);
+
+        boolean success = addLaptopDatabase(laptop);
 
         return success;
 
